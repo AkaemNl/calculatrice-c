@@ -1,21 +1,12 @@
 #include <stdio.h>
 
-void exchange(int *x, int *y)
-{
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
-
 int main(void)
 {
-    int x = 10;
-    int y = 20;
-    
-    int *px = &x;
-    int *py = &y;
-    exchange(px, py);
-    printf("x = %d, y = %d\n", x, y);
-    printf("*px = %d, *py = %d\n", *px , *py);
+    int nombres[5] = {4, 2, 10, 8, 6 };
+    int i;
+    for (i = 0; i < 5; i++)
+    {
+        printf("%d\n", *(nombres + i));
+    }
     return 0;
 }
